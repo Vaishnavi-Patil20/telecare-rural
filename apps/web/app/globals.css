@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --primary: #0E7C66; }
+html { scroll-behavior: smooth; }
+
+/* Large touch targets for low digital literacy */
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-base font-semibold
+         min-h-[52px] transition-transform active:scale-[0.98]; }
+  .btn-primary { @apply btn bg-primary text-white hover:bg-primary-dark shadow-soft; }
+  .btn-outline { @apply btn border-2 border-primary text-primary hover:bg-primary-light dark:hover:bg-slate-800; }
+  .card { @apply rounded-2xl bg-white p-6 shadow-soft dark:bg-slate-900; }
+}
